@@ -44,7 +44,7 @@ if (empty($_SESSION['csrf_token'])) {
 if (isset($_GET['logout'])) {
     session_unset();
     session_destroy();
-    header("Location: https://generate.gsmserver.org/");
+    header("Location: #");
     exit;
 }
 

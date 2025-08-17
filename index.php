@@ -88,9 +88,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['ftp_url'])) {
         die("Invalid input format");
     }
 
-    // Sanitize & Replace
-    $clean_url = preg_replace("#^ftp://.*?replace#", "", $input_url);
-    $final_url = "replace" . $clean_url;
+   // Sanitize & Replace
+   $clean_url = preg_replace("#^ftp://.*?@000\.000\.000\.000/public_html#", "", $input_url);
+   $final_url = "https://yourdomain.xyz" . $clean_url;
 
     // Log securely
     $logFile = __DIR__ . "/links_log.txt";

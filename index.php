@@ -48,8 +48,8 @@ if (isset($_GET['logout'])) {
     exit;
 }
 
-// ===== Password Protection =====
-$PASSWORD = "24434";
+// ===== Password Protection You Can Replace Password =====
+$PASSWORD = "123445";
 $SESSION_TIMEOUT = 900; // 15 minutes
 
 if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
@@ -89,8 +89,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['ftp_url'])) {
     }
 
     // Sanitize & Replace
-    $clean_url = preg_replace("#^ftp://.*?@67\.211\.221\.230/public_html#", "", $input_url);
-    $final_url = "https://gsmserver.xyz" . $clean_url;
+    $clean_url = preg_replace("#^ftp://.*?replace#", "", $input_url);
+    $final_url = "replace" . $clean_url;
 
     // Log securely
     $logFile = __DIR__ . "/links_log.txt";
